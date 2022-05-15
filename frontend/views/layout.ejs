@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+     <% if(typeof isSzek == "undefined") { %>
+        <link rel="stylesheet" href="../styles/style.css">
+    <% } %>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <% if(typeof isSzek == "undefined") { %>
+    <div class="navbar">
+        <div class="navbarelemek">
+            <div class="logoelem">
+                <h1 class="logo">CinKOM</h1>
+            </div>
+            <div class="menuelem">
+                <ul class="menu-lista">
+                    <li class="lista-elemek"><b> 
+                        <% if(typeof isIndex != "undefined" && isIndex) { %> 
+                            Kezdőlap
+                        <% } else { %>
+                            <a href="/">Kezdőlap</a> 
+                        <% } %>
+                    </b>
+                    <li class="lista-elemek"><b> 
+                        <% if(typeof isReg != "undefined" && isReg) { %> 
+                            Regisztráció
+                        <% } else { %>
+                            <a href="/regisztracio">Regisztráció</a> 
+                        <% } %>
+                    </b>
+                    <li class="lista-elemek"><b> 
+                        <% if(typeof isSzek != "undefined" && isSzek) { %> 
+                            Foglalás
+                        <% } else { %>
+                            <a href="/foglalas">Foglalás</a> 
+                        <% } %>
+                    </b>
+                </ul>
+            </div>
+            <div class="profilelem">
+                <img class="profilkep" src="img/profil.jpg"> 
+                <div class="profilkep-szoveg-elem">
+                    <span class="profilkep-szoveg">
+                        <% if(user) { %> 
+                            <a href="/kijelentkezes">Kijelentkezés</a> 
+                        <% } else if(typeof isLogin != "undefined" && isLogin) { %>
+                            Bejelentkezés
+                        <% } else { %>
+                            <a href="/bejelentkezes">Bejelentkezés</a> 
+                        <% } %>
+                    </span>
+                    <i class="fas fa-angle-double-left"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    <%- body %>
+</body>
+</html>

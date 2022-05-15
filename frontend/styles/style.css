@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color:#002d87;
+}
+.navbarelemek{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family:'Sen', sans-serif;
+}
+.logoelem{
+    flex: 1;
+}
+.logo{
+
+    font-size: 30px;
+    color: #14850a;
+}
+.menuelem{
+    flex: 6;
+}
+.menu-lista{
+    display: flex;
+    list-style: none;
+}
+.lista-elemek{
+    margin-right: 25px;
+}
+.profilelem{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.profilkep-szoveg-elem{
+    margin: 0 20px;
+}
+.profilkep{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container{
+    background-color: black;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+
+.film{
+    height: 750px;
+    padding: 50px;
+
+}
+.film2{
+    height: 750px;
+    padding: 50px;
+
+}
+.filmcim1{
+    width: 350px;
+}
+.filmcim2{
+    width: 350px;
+}
+.filmleiras1{
+    width: 800px;
+    color: rgb(255, 250, 250);
+    margin: 30px 0;
+    font-size: 17px;
+    color: black;
+    padding: auto;
+}
+.elozetes1{
+    margin-top: 10px;
+    background-color: #14850a;
+    color: white;
+    padding:8px 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+.elozetes1:hover{
+    cursor: pointer;
+    background: #2522d4;
+    color:red;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.filmlista-container{
+    padding:  20px;
+}
+.filmlista-wraper{
+    position: relative;
+    overflow: hidden;
+}
+
+.filmlista{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+.filmlista-item{
+    margin-right: 30px;
+    position: relative;
+}
+.filmlista-item-gomb:hover{
+    cursor: pointer;
+    background: #2522d4;
+    color:red;
+}
+
+.filmlista-item:hover .filmlista-item-kep{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.filmlista-item:hover .filmlista-item-cim,
+.filmlista-item:hover .filmlista-item-leiras,
+.filmlista-item:hover .filmlista-item-gomb{
+    opacity: 1;
+}
+
+
+
+
+.filmlista-item-kep{
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.filmlista-item-cim{
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.filmlista-item-leiras{
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 210px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.filmlista-item-gomb{
+    padding: 10px;
+    background-color: #14850a;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.nyil{
+    font-size: 110px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.vissza-gomb{
+    display: block;
+    color: white;
+    background-color: gray;
+    border-radius: 30px;
+    margin-top: 15px;
+    padding: 1rem 1rem;
+}
+
+.fof{
+transform: translateY(-50);
+}
+
+.fof h1{
+    font-size: 50px;
+    display: inline-block;
+    padding-right: 12px;
+    animation: type .5s alternate infinite;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #888;
+    margin: 0;
+}
+
+.error-container {
+    background-color: "#ebeced";
+    border-radius: 20px;
+    height: 50px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hibas-adat {
+    color: red;
+    font-weight: 600;
+    font-size: 1.3rem;
+
+}
+
+
+@media only screen and (max-width:940px){
+    .menuelem{
+        display: none;
+    }
+}

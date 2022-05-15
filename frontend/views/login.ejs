@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="../styles/login.css" />
+<div class="error-container">
+  <% if(messages.nincs) { %>
+  <span class="hibas-adat"><%= messages.nincs %></span>
+  <% } %>
+</div>
+<div class="bejbox">
+  <img src="img/profil.jpg" class="profil" />
+  <h1 class="bej">Bejelentkezés</h1>
+  <form action="/bejelentkezes" method="POST" autocomplete="off">
+    <p>E-mail cím:</p>
+    <input type="text" name="email" placeholder="E-mail" required />
+    <p>Jelszó:</p>
+    <input type="password" name="jelszo" placeholder="Jelszó" required />
+    <div class="submit-container">
+      <button type="submit" class="bejelentkezes">Bejelentkezés</button>
+      <a href="/regisztracio" class="nincs">Nincs még felhasználója?</a>
+    </div>
+  </form>
+</div>

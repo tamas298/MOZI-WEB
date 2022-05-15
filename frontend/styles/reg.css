@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/reghatter.jpg)
+}
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color:#002d87;
+}
+.navbarelemek{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family:'Sen', sans-serif;
+}
+.logoelem{
+    flex: 1;
+}
+.logo{
+
+    font-size: 30px;
+    color: #14850a;
+}
+.menuelem{
+    flex: 6;
+}
+.menu-lista{
+    display: flex;
+    list-style: none;
+}
+.lista-elemek{
+    margin-right: 25px;
+}
+.profilelem{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.profilkep-szoveg-elem{
+    margin: 0 20px;
+}
+.profilkep{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.kapcsolo{
+    width: 40px;
+    height: 20px;
+    background-color: red;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.kapcsolo-ikon{
+    color: rgb(228, 243, 11);
+}
+.kapcsolo-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.adatcim{
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.submezo{
+    background-color:#002d87;
+    color: #fff;
+    border: 2px solid;
+    border-color: red;
+    border-radius: 20px;
+    padding-bottom: 25px;
+    font-size: 16px;
+    width: 400px;
+    text-align: center;
+    padding: 15px;
+    padding-inline: 10px;
+    margin: auto;
+}
+.a{
+    position: relative;
+    right: 80px;
+    text-align: right;
+
+}
+#Adatok{
+    padding: 15px;
+    text-align: center;
+    align-content: center;
+}
+#Adatok label{
+    display:block;
+    margin-bottom: 10px;
+}
+#Adatok input{
+    display: inline-block
+}
+.tamogatoink{
+    position: relative;
+    right: 80px;
+    color: #14850a;
+}
+
+.kuldes{
+    margin-top: 10px;
+    background-color: #14850a;
+    color: white;
+    padding:8px 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100px;
+    cursor: pointer;
+}
+.kuldes:hover{
+    cursor: pointer;
+    background: red;
+    color:#000;
+}
+.megse{
+    margin-top: 10px;
+    background-color: #14850a;
+    color: white;
+    padding:8px 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.megse:hover{
+    cursor: pointer;
+    background: red;
+    color:#000;
+}

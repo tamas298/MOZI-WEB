@@ -1,0 +1,97 @@
+<link rel="stylesheet" type="text/css" href="../styles/reg.css"> 
+
+</div>
+<h2 class="adatcim">Kérem töltse ki az adatokat:</h2>
+<div class="error-container">
+    <% if (messages.email) { %>
+        <span class="hibas-adat"><%= messages.email %></span>
+    <% } %>
+    <% if (messages.jelszo) { %>
+    <span class="hibas-adat"><%= messages.jelszo %></span>
+    <% } %>
+    <% if (messages.telefonszam) { %>
+        <span class="hibas-adat"><%= messages.telefonszam %></span>
+        <% } %>
+</div>
+<br>
+<form id="Adatok" action="/regisztracio" method="POST" autocomplete="off">
+    <label for="vezeteknev" style="color: red; font-size: 20px;">Vezetéknév: </label>
+    <input type="text" id="vezeteknev" name="vezeteknev" placeholder="pl.(Tamás)" required>
+
+    <br><br>
+
+    <label for="keresztnev" style="color: red; font-size: 20px;">Keresztnév: </label>
+    <input type="text" id="keresztnev" name="keresztnev" placeholder="pl.(Molnár)" required>
+
+    <br><br>
+
+    <label for="fizetes:" style="color: red;font-size: 20px;">Fizetés módja: </label>
+    <select id="fizetes" name="fizetes">
+        <option value="visa">Visa</option>
+        <option value="mastercard">Mastercard</option>
+        <option value="paypal">Paypal</option>
+        <option value="maestro">Maestro</option>
+    </select>
+
+    <br><br>
+
+    <label for="bszam" style="color: red; font-size: 20px;">Bankszámlaszám: </label>
+    <input type="text" id="bszam" name="bszam" placeholder="pl.(4219 0464 2212 7815)" required>
+
+    <br><br>
+
+    <label for="email" style="color: red; font-size: 20px;">Email: </label>
+    <input type="email" id="email" name="email" placeholder="pl.(tamas123@gmail.com)" required>
+
+    <br><br>
+
+    <label for="szuletesnap" style="color: red;font-size: 20px;">Születésnap: </label>
+    <input type="date" id="szuletesnap" name="szuletesnap" required>
+
+    <br><br>
+
+    <label for="telefonszam" style="color: red; font-size: 20px;">Telefonszám: </label>
+    <input type="text" id="telefonszam" name="telefonszam" placeholder="pl.(+421904645212)">
+
+    <br><br>
+
+    <label for="jelszo" style="color: red; font-size: 20px;">Jelszó: </label>
+    <input type="password" id="jelszo" name="jelszo" placeholder="Maximum 12 karakter!" maxlength="12" required>
+
+    <br><br>
+
+    <label for="csuszka" style="color:red;font-size:20px;">Értékelj Minket!: </label>
+    <font style="color: red;font-size: 20px; ">1</font><input type="range" step="1" min="1" max="5" name="ertekeles">
+    <font style="color: red; font-size: 20px;">5</font>
+
+    <br><br>
+
+    <label for="iratkozas" style="color: red; font-size: 20px;">Iratkozz Fel! </label>
+    <input type="checkbox" id="iratkozas" name="iratkozas">
+
+    <br><br>
+
+    <div class="submezo">
+        Amennyiben szeretne értesülni a legújabb filmjeink vetítési időpontjairól<br>
+        kérem pipálja ki a fentebb található <b style="color: red;">Iratkozz Fel!</b> mezőt,így semmiről sem<br>
+        fog lemaradni,hírlevelünk rögtön tájékoztatni fogja önt email formájában!
+    </div>
+
+    <br><br>
+    <input class="kuldes" type="submit">
+
+    <br><br>
+
+    <input class="megse" type="reset">
+
+</form>
+
+<h2 class="tamogatoink" style=" text-align: right;margin-top: 25px; margin-bottom: 20px;">
+    <u><i>Támogatóink</i></u>
+</h2>
+<div class="a">
+    <img src="img/visa.png" width="80" height="50">
+    <img src="img/mastercard.png" width="80" height="50">
+    <img src="img/paypal.png" width="80" height="50">
+    <img src="img/cinemalogo.png" width="80" height="50"">
+</div> 

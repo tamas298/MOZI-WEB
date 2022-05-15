@@ -1,0 +1,130 @@
+<link rel="stylesheet" type="text/css" href="../styles/szek.css">
+
+<div class="film-valasztas">
+    <div class="center">
+        <a href="/">Főoldal</a>
+    </div>
+    <label>Valasszon egy filmet:</label>
+    <input type="hidden" id="foglaltSzékek" value=<%= csoportosítottFoglalások %>>
+    <input type="hidden" id="címFoglalás" value=<%= vanFoglalva %>>
+    <input type="hidden" id="felhasználóId" value=<%= nyersFelhasználóID %>>
+    <input type="hidden" id="sok" value=<%= foglalt %>> 
+    <input type="hidden" id="foglaltCím" value=<%= messages.foglaltCím %>>
+    <select id="film">
+        <option value='{"ár": 7, "cím": "Pókember: Nincs hazaút (7€)" }'>Pókember: Nincs hazaút (7€)</option>
+        <option value='{"ár": 5, "cím": "Agymanók (5€)" }'>Agymanók (5€)</option>
+        <option value='{"ár": 5, "cím": "Pig (5€)" }'>Pig (5€)</option>
+        <option value='{"ár": 7, "cím": "1917 (7€)" }'>1917 (7€)</option>
+        <option value='{"ár": 6, "cím": "Hang Nélkül 2 (6€)" }'>Hang Nélkül 2 (6€)</option>
+        <option value='{"ár": 7, "cím": "Shang-Chi és a tíz gyűrű (7€)" }'>Shang-Chi és a tíz gyűrű (7€)</option>
+        <option value='{"ár": 5, "cím": "Raya (5€)" }'>Raya (5€)</option>
+        <option value='{"ár": 6, "cím": "Idő (6€)" }'>Idő (6€)</option>
+    </select>
+</div>
+
+<ul class="showcase">
+    <li>
+        <div class="ules"></div>
+        <small>Szadad helyek</small>
+    </li>
+
+    <li>
+        <div class="ules kivalasztott"></div>
+        <small>Kivalasztott</small>
+    </li>
+
+    <li>
+        <div class="ules foglalt"></div>
+        <small>Foglalt</small>
+    </li>
+</ul>
+<div>
+    <span>Maximum 8 ülést foglalhat le!</span>
+</div>
+<div class="container">
+    <div class="screen"></div>
+    <div class="sor" id="sor-a">
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+    </div>
+
+    <div class="sor">
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+    </div>
+
+    <div class="sor">
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+    </div>
+
+    <div class="sor">
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+    </div>
+
+    <div class="sor">
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+    </div>
+
+    <div class="sor">
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+        <div class="ules szek"></div>
+    </div>
+</div>
+
+<p class="szoveg">
+    Ön kiválasztott <span id="count">0</span> ülést, jelenlegi ár <span id="total">0</span>€.
+</p>
+<div id="foglalás-törlés">
+    
+</div>
+
+<br><br>
+<form action="/foglalas" method="post">
+    <input type="hidden" name="filmCím" id="filmCím">
+    <input type="hidden" name="filmÁr" id="filmÁr" >
+    <input type="hidden" name="székek" id="rejtettSzékek">
+    <input class="kuldes2" type="submit" id="küldés">
+</form>
+
+<br><br>
+
+<script src="../src/szek.js"></script>
