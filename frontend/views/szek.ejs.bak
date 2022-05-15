@@ -10,16 +10,21 @@
   <input type="hidden" id="felhasználóId" value=<%= nyersFelhasználóID %>>
   <input type="hidden" id="sok" value=<%= foglalt %>> 
   <input type="hidden" id="foglaltCím" value=<%= messages.foglaltCím %>>
-  <select id="film">
-    <option value='{"ár": 7, "cím": "Pókember: Nincs hazaút (7€)" }'>Pókember: Nincs hazaút (7€)</option>
+    <option value='{"ár": 7, "cím": "Pókember: Nincs hazaút (7€)" }'>
+      Pókember: Nincs hazaút (7€)
+    </option>
     <option value='{"ár": 5, "cím": "Agymanók (5€)" }'>Agymanók (5€)</option>
     <option value='{"ár": 5, "cím": "Pig (5€)" }'>Pig (5€)</option>
     <option value='{"ár": 7, "cím": "1917 (7€)" }'>1917 (7€)</option>
-    <option value='{"ár": 6, "cím": "Hang Nélkül 2 (6€)" }'>Hang Nélkül 2 (6€)</option>
-    <option value='{"ár": 7, "cím": "Shang-Chi és a tíz gyűrű (7€)" }'>Shang-Chi és a tíz gyűrű (7€)</option>
+    <option value='{"ár": 6, "cím": "Hang Nélkül 2 (6€)" }'>
+      Hang Nélkül 2 (6€)
+    </option>
+    <option value='{"ár": 7, "cím": "Shang-Chi és a tíz gyűrű (7€)" }'>
+      Shang-Chi és a tíz gyűrű (7€)
+    </option>
     <option value='{"ár": 5, "cím": "Raya (5€)" }'>Raya (5€)</option>
     <option value='{"ár": 6, "cím": "Idő (6€)" }'>Idő (6€)</option>
-</select>
+  </select>
 </div>
 
 <ul class="showcase">

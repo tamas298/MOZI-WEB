@@ -1,7 +1,7 @@
 const express = require("express");
-const utvonal = require("./routes/utvonal");
+const utvonal = require("./backend/routes/utvonal");
 const passport = require("passport");
-const passportBeallitas = require("./src/passport");
+const passportBeallitas = require("./backend/src/passport");
 const mongoose = require("mongoose");
 const mongoDbStore = require("connect-mongo");
 const session = require("express-session");
@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 const adatbazisString =
   "mongodb+srv://tamas22:Kayser22@cinkom.qwnw8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const app = express();
-
+console.log(__dirname);
 app.use(
   session({
     secret: "HkoixjvcfvbhgnveFGevgfqtzujnf",
@@ -40,12 +40,12 @@ app.use((req, res, next) => {
 
 app.use(expressEjsLayouts);
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../frontend/views"));
+app.set("views", path.join(__dirname, "./frontend/views"));
 
 app.use(express.json());
 app.use(urlencoded({ extended: false }));
 app.use(flash());
-app.use(express.static("../frontend"));
+app.use(express.static("./frontend"));
 app.use(utvonal);
 
 mongoose.connect(

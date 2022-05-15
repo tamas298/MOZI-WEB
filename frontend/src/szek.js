@@ -38,7 +38,7 @@ filmValasztas.addEventListener('change', (e) => {
     const film = JSON.parse(e.target.value)
     filmVáltoztatás(film)
 })
-
+console.log(filmValasztas)
 
 function updateSelectedCount() {
     valasztottUlesek = document.querySelectorAll('.sor .ules.kivalasztott')
